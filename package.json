@@ -1,8 +1,9 @@
 {
   "name": "@octoris/static",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A static serve middleware for octoris",
   "main": "index.js",
+  "private": false,
   "dependencies": {
     "parseurl": "^1.3.3"
   },
@@ -11,7 +12,10 @@
     "tape": "^4.13.0"
   },
   "scripts": {
-    "test": "tape tests/index.js | tap-spec"
+    "test": "tape tests/index.js | tap-spec",
+    "ac": "git add . && npx git-cz",
+    "commit": "npx git-cz",
+    "release": "npx standard-version"
   },
   "repository": {
     "type": "git",
@@ -28,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/octoris/serve-static/issues"
   },
-  "homepage": "https://github.com/octoris/serve-static#readme"
+  "homepage": "https://github.com/octoris/serve-static#readme",
+  "directories": {
+    "test": "tests"
+  }
 }
