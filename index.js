@@ -17,7 +17,7 @@ function serveStatic (loc, opts = {}) {
         return ctx.response.end(405)
       }
 
-      if (pathName === '/' && originalUrl.pathname.substr(-1) !== '/') {
+      if (pathName === '/' && originalUrl.pathname.slice(-1) !== '/') {
         pathName = ''
       }
 
